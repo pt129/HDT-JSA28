@@ -1,5 +1,6 @@
 let register = document.getElementById("register-form");
 register.addEventListener("submit", function (event) {
+  console.log("Đăng kí")
   event.preventDefault(); //// Ngăn sự kiện reload mặc định của trình duyệt.
 
   let lowerCaseLetter = /[a-z]/g;
@@ -44,14 +45,14 @@ register.addEventListener("submit", function (event) {
       if (dem == 0) {
         users.push(data);
         localStorage.setItem("users", JSON.stringify(users));
-        location.replace("./dangnhap.html");
+        location.replace("./login.html");
       }
     }
     else {
       localStorage.setItem("users", JSON.stringify(
         [data]
       ));
-      location.replace("./dangnhap.html");
+      location.replace("./login.html");
     }
 
   }
