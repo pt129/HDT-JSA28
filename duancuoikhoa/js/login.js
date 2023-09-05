@@ -10,7 +10,7 @@ login.addEventListener("submit", function (event) {
     if (users[i].email === login.email.value.trim()) {
       if (users[i].password === login.password.value.trim()) {
         alert("Login Success");
-        window.location.href = "../register.html";
+        window.location.href = "./a/index.html";
        
       //để lại
         break;
